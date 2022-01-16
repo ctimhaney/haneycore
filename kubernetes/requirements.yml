@@ -1,0 +1,9 @@
+collections:
+  - name: ctimhaney.system
+    source: https://github.com/ctimhaney/ansible_collections.git#/ctimhaney/system/
+    type: git
+    version: feature/alpha-0.0.1
+  - name: ctimhaney.kubernetes
+    source: https://github.com/ctimhaney/ansible_collections.git#/ctimhaney/kubernetes/
+    type: git
+    version: feature/alpha-0.0.1

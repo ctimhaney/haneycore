@@ -1,0 +1,4 @@
+inventories/*
+!inventories/.keep
+*.env
+ansible.cfg
