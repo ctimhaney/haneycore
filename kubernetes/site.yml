@@ -10,6 +10,26 @@
         - setup
 
     - import_role:
-        name: ctimhaney.system.docker
+        name: ctimhaney.system.patching
       tags:
-        - docker
+        - patching
+
+- name: Install Kubernetes Control Plane
+  hosts: kubernetes_control
+  gather_facts: no
+  tasks:
+    - import_role:
+        name: ctimhaney.Kubernetes.kubeadm_cluster
+      tags:
+        - kubeadm_cluster
+        - kubernetes_control
+
+- name: Install Kubernetes Workers
+  hosts: kubernetes_worker
+  gather_facts: no
+  tasks:
+    - import_role:
+        name: ctimhaney.Kubernetes.kubeadm_cluster
+      tags:
+        - kubeadm_cluster
+        - kubernetes_worker
